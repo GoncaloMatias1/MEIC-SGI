@@ -1,0 +1,3621 @@
+{
+    "yasf": {
+        "globals": {
+            "background": {
+                "r": 0,
+                "g": 0,
+                "b": 0
+            },
+            "ambient": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "intensity": 0.2
+            },
+            "fog": {
+                "color": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "near": 100.0,
+                "far": 10000.0
+            },
+            "skybox": {
+                "size": {
+                    "x": 1000,
+                    "y": 1000,
+                    "z": 1000
+                },
+                "center": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "emissive": {
+                    "r": 0,
+                    "g": 0,
+                    "b": 0
+                },
+                "intensity": 1,
+                "front": "scenes/room/textures/red_galaxy.jpg",              
+                "back": "scenes/room/textures/red_galaxy.jpg",              
+                "up": "scenes/room/textures/red_galaxy.jpg",                
+                "down": "scenes/room/textures/red_galaxy.jpg",
+                "left": "scenes/room/textures/red_galaxy.jpg",
+                "right": "scenes/room/textures/red_galaxy.jpg" 
+            }
+        },
+        "cameras": {
+            "initial": "room",
+            "room": {
+                "type": "perspective",
+                "angle": 60,
+                "near": 0.1,
+                "far": 1000,
+                "location": {
+                    "x": 15,
+                    "y": 12,
+                    "z": 15
+                },
+                "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "corridor": {
+                "type": "perspective",
+                "angle": 60,
+                "near": 0.1,
+                "far": 1000,
+                "location": {
+                    "x": 30,
+                    "y": 15,
+                    "z": -35
+                },
+                "target": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "orthogonal": {
+                "type": "orthogonal",
+                "near": 10,
+                "far": 1000,
+                "location": {
+                    "x": 12,
+                    "y": 15,
+                    "z": 30
+                },
+                "target": {
+                    "x": 0,
+                    "y": 15,
+                    "z": 0
+                },
+                "left": -5,
+                "right": 5,
+                "bottom": -5,
+                "top": 5
+            }
+        },
+        "textures": {
+            "roomWallTexture": {
+                "filepath": "scenes/room/textures/roomwalls.jpg",
+                "isVideo": false 
+            },
+            "roomFloorTexture": {
+                "filepath": "scenes/room/textures/roomfloor.jpg",
+                "isVideo": false 
+            },
+            "roomRoofTexture": {
+                "filepath": "scenes/room/textures/roomroof.jpg",
+                "isVideo": false 
+            },
+            "corridorWallTexture": {
+                "filepath": "scenes/room/textures/corridorWalls2.jpg",
+                "isVideo": false 
+            },
+            "corridorFloorTexture": {
+                "filepath": "scenes/room/textures/corridorFloor2.jpg",
+                "isVideo": false 
+            },
+            "mattressTex": {
+                "filepath": "scenes/room/textures/bedTexture.jpg",
+                "isVideo": false,
+                "mipmap0": "scenes/room/textures/bedTexture.jpg",
+                "mipmap1": "scenes/room/textures/bedTexture1.jpg",
+                "mipmap2": "scenes/room/textures/bedTexture2.jpg"
+            },
+            "mattressNormalTex": {
+                "filepath": "scenes/room/textures/bedBumpTexture.jpg",
+                "isVideo": false 
+            },
+            "bedTex": {
+                "filepath": "scenes/room/textures/metal.jpg",
+                "isVideo": false
+            },
+            "soroTex":{
+                "filepath": "scenes/room/textures/plastic.jpg",
+                "isVideo": false 
+            },
+            "sorobagTex":{
+                "filepath": "scenes/room/textures/soro.jpg",
+                "isVideo": false 
+            },
+            "sorobagBumpTex":{
+                "filepath": "scenes/room/textures/soroBumpTexture.jpg",
+                "isVideo": false 
+            },
+            "video":{
+                "filepath": "scenes/room/videos/oceans.mp4",
+                "isVideo": true
+            },
+            "machinecontrolTex":{
+                "filepath": "scenes/room/textures/machinecontrols.jpg",
+                "isVideo": false 
+            },
+            "machineTexture":{
+                "filepath": "scenes/room/textures/machine.jpg",
+                "isVideo": false 
+            },
+            "portraitTex":{
+                "filepath": "scenes/room/textures/portrait.jpg",
+                "isVideo": false 
+            },
+            "paintingTex":{
+                "filepath": "scenes/room/textures/painting.jpg",
+                "isVideo": false 
+            },
+            "doorTex":{
+                "filepath": "scenes/room/textures/door.jpg",
+                "isVideo": false 
+            },
+            "chairTex":{
+                "filepath": "scenes/room/textures/oldchair.jpg",
+                "isVideo": false 
+            },
+            "chairlegTex":{
+                "filepath": "scenes/room/textures/chairleg.jpg",
+                "isVideo": false 
+            },
+            "tvBodyTex":{
+                "filepath": "scenes/room/textures/tvBody.jpg",
+                "isVideo": false 
+            },
+            "tvScreenTex":{
+                "filepath": "scenes/room/videos/news.mp4",
+                "isVideo": true 
+            },
+            "cupboardTex":{
+                "filepath": "scenes/room/textures/cupboard.jpg",
+                "isVideo": false 
+            },
+            "boxTex":{
+                "filepath": "scenes/room/textures/box.jpg",
+                "isVideo": false 
+            },
+            "bottleTex":{
+                "filepath": "scenes/room/textures/bottle1.jpg",
+                "isVideo": false 
+            }
+        },
+        "materials": {
+            "roomWallMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "roomWallTexture",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+            "roomFloorMaterial": {
+                "color": {
+                    "r": 0.25,
+                    "g": 0.22,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "roomFloorTexture",
+                "texlength_s": 2,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+            "roomRoofMaterial": {
+                "color": {
+                    "r": 0.1,
+                    "g": 0.1,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "roomRoofTexture",
+                "texlength_s": 6,
+                "texlength_t": 3,
+                "twosided": "false"
+            },
+            "corridorWallMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "corridorWallTexture",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+            "corridorWallMaterial2": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "corridorWallTexture",
+                "texlength_s": 3,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+            "corridorFloorMaterial": {
+                "color": {
+                    "r": 0.25,
+                    "g": 0.22,
+                    "b": 0.1
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 0,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "corridorFloorTexture",
+                "texlength_s": 2,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+            "videoMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "video",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+ 
+            "mattressMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "mattressTex",
+                "bumpref": "mattressNormalTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+
+            "bedMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "bedTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+            "soroMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "soroTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+
+            "sorobagMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "specular": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "shininess": 10,
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "sorobagTex",
+                "bumpref": "sorobagBumpTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+
+            "machinecontrolMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "machinecontrolTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+            "machineMaterial": {
+                "color": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "machineTexture",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+            "portraitMaterial": {
+                "color": {
+                    "r": 1.6,
+                    "g": 1.4,
+                    "b": 1.3
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "portraitTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+            "doorMaterial": {
+                "color": {
+                    "r": 0.21,
+                    "g": 0.22,
+                    "b": 0.18
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "doorTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+            "chairMaterial": {
+                "color": {
+                    "r": 0.5,
+                    "g": 0.5,
+                    "b": 0.5
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "chairTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+
+            "chairlegMaterial": {
+                "color": {
+                    "r": 0.2,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "chairlegTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+
+            "televisionBodyMaterial": {
+                "color": {
+                    "r": 0.2,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "tvBodyTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+
+            "televisionScreenMaterial": {
+                "color": {
+                    "r": 0.2,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "tvScreenTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "true"
+            },
+
+            "paintingMaterial": {
+                "color": {
+                    "r": 1.5,
+                    "g": 1.3,
+                    "b": 1
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "paintingTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+
+            "cupboardMaterial": {
+                "color": {
+                    "r": 0.2,
+                    "g": 0.2,
+                    "b": 0.2
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "cupboardTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+
+            "boxMaterial": {
+                "color": {
+                    "r": 0.4,
+                    "g": 0.4,
+                    "b": 0.4
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "boxTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            },
+            "bottleMaterial": {
+                "color": {
+                    "r": 0.4,
+                    "g": 0.4,
+                    "b": 0.4
+                },
+                "specular": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "shininess": 10,
+                "emissive": {
+                    "r": 0.0,
+                    "g": 0.0,
+                    "b": 0.0
+                },
+                "transparent": false,
+                "opacity": 1.0,
+                "textureref": "bottleTex",
+                "texlength_s": 1,
+                "texlength_t": 1,
+                "twosided": "false"
+            }
+        },
+        "graph": {
+            "rootid": "scene",
+            "scene": {
+                "type": "node",
+                "children": {
+                    "pointLight": {
+                        "type": "pointlight",
+                        "enabled": true,
+                        "color": {
+                            "r": 1,
+                            "g": 1,
+                            "b": 1
+                        },
+                        "intensity": 200.0,
+                        "distance": 30,
+                        "decay": 2.0,
+                        "position": {
+                            "x": 0,
+                            "y": 7.5,
+                            "z": 3
+                        },
+                        "castshadow": true,
+                        "shadowfar": 300,
+                        "shadowmapsize": 256
+                    },
+                    "spotLight": {
+                        "type": "spotlight",
+                        "color": {
+                            "r": 1.0,
+                            "g": 1.0,
+                            "b": 1.0
+                        },
+                        "angle": 60,
+                        "distance": 60,
+                        "intensity": 100,         
+                        "position": {
+                            "x": -8,
+                            "y": 6,
+                            "z": -21
+                        },
+                        "decay": 0,
+                        "target": {
+                            "x": 100,
+                            "y": 6,
+                            "z": -20
+                        },
+                        "castshadow": true,
+                        "shadowfar": 300,
+                        "shadowmapsize": 256
+                    },
+                    "nodesList": [
+                        "bed",
+                        "room",
+                        "machine",
+                        "chair",
+                        "painting",
+                        "soro",
+                        "corridor",
+                        "cupboard"
+                    ]
+                }
+            },
+
+            "empty_lod": {
+                "type": "node",
+                "children": {
+                    "rectanglePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 0,
+                            "y": 0
+                        },
+                        "xy2": {
+                            "x": 0,
+                            "y": 0
+                        }
+                    }
+                }
+            },
+
+            "room": {
+                "type": "node",
+                "receiveshadows": true,
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 7.5,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "roomfloor",
+                        "roomroof",
+                        "frontroomwall",
+                        "backroomwall",
+                        "leftroomwall",
+                        "rightroomwall",
+                        "door",
+                        "mypolygon"
+                    ]
+                }
+            },
+
+            "mypolygon": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 15,
+                            "y": -6,
+                            "z": -19
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,  
+                            "y": 180,
+                            "z": 20   
+                        }
+                    }
+                ],
+                "children": {
+                    "polygonPrim": {
+                        "type": "polygon",
+                        "radius": 5.0,
+                        "slices": 5,
+                        "stacks": 3,
+                        "color_c": {
+                            "r": 1.0,
+                            "g": 0.0,
+                            "b": 0.0
+                        },
+                        "color_p": {
+                            "r": 0.0,
+                            "g": 0.0,
+                            "b": 1.0
+                        }
+                    }
+                }
+            },
+
+            "roomfloor": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "roomFloorMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": -7.6,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 13,
+                            "y": 15
+                        },
+                        "xy2": {
+                            "x": -13,
+                            "y": -15
+                        }
+                    }
+                }
+            },
+
+            "roomroof": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "roomRoofMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 8,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 13,
+                            "y": 15
+                        },
+                        "xy2": {
+                            "x": -13,
+                            "y": -15
+                        }
+                    }
+                }
+            },
+
+            "frontroomwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "roomWallMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 180,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0.4,
+                            "z": 19.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 13,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -13,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "backroomwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "roomWallMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0.4,
+                            "z": -10.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 13,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -13,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "leftroomwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "roomWallMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 13,
+                            "y": 0.4,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 15,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -15,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "rightroomwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "roomWallMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -13,
+                            "y": 0.4,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 15,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -15,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "cupboard": {
+                "type": "node",
+                "castshadows": true,
+                "receiveshadows": true,
+                "materialref": {
+                    "materialId": "cupboardMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -10,
+                            "y": 1.45,
+                            "z": -7
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "shelf1",
+                        "shelf2",
+                        "shelf3",
+                        "shelf4",
+                        "shelf5",
+                        "shelf6",
+                        "box"
+                    ],
+                    "lodsList": [
+                        "bottle1_lod",
+                        "bottle2_lod",
+                        "bottle3_lod"
+                    ]
+                }
+            },
+
+            "shelf1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.8,
+                            "y": -1.2,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2.0,
+                            "y": 0.2,
+                            "z": 7.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "shelf2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.8,
+                            "y": 2.06,
+                            "z": 4.5
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2.0,
+                            "y": 7.2,
+                            "z": 0.3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "shelf3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.8,
+                            "y": 2.06,
+                            "z": -2.5
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2.0,
+                            "y": 7.2,
+                            "z": 0.3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "shelf4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.8,
+                            "y": 1.9,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2.0,
+                            "y": 0.2,
+                            "z": 7.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "shelf5": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.8,
+                            "y": 4.6,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2.0,
+                            "y": 0.2,
+                            "z": 7.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "shelf6": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -2.8,
+                            "y": 2.2,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.1,
+                            "y": 6.9,
+                            "z": 7.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "box": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "boxMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.8,
+                            "y": -0.01,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.5,
+                            "y": 2.6,
+                            "z": 5.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "bottle1": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "bottleMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.5,
+                            "y": 5.2,
+                            "z": -0.3
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.0,
+                            "y": 1,
+                            "z": 1.0
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 0.2,
+                        "top": 0.2,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bottle2": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "bottleMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.3,
+                            "y": 5.2,
+                            "z": 0.5
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.0,
+                            "y": 1,
+                            "z": 1.0
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 0.2,
+                        "top": 0.2,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bottle3": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "bottleMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.3,
+                            "y": 4.92,
+                            "z": -0.9
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.0,
+                            "y": 1,
+                            "z": 1.0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": -75
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 0.2,
+                        "top": 0.2,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bottle1_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "bottle1",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",
+                    "mindist": 60
+                }]
+            },
+
+            "bottle2_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "bottle2",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",
+                    "mindist": 60
+                }]
+            },
+
+            "bottle3_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "bottle3",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",
+                    "mindist": 60
+                }]
+            },
+
+            "machine": {
+                "type": "node",
+                "castshadows": true,
+                "receiveshadows": true,
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -6,
+                            "y": 1.45,
+                            "z": 12
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "machine1",
+                        "machine2"
+                    ],
+                    "lodsList": [
+                        "portrait_lod"
+                    ]
+                }
+            },
+
+            "machine1": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "machineMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 5.0,
+                            "y": 3.0,
+                            "z": 4.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "machine2": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "machinecontrolMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 2.5,
+                            "z": 0.9
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 5.0,
+                            "y": 2.0,
+                            "z": 2.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "portrait": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "portraitMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 2.1,
+                            "z": -1.1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.3,
+                            "y": 1.3,
+                            "z": 0.1
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 30,
+                            "y": -30,
+                            "z": 15
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "portrait_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "portrait",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",
+                    "mindist": 60
+                }]
+            },
+
+            "chair": {
+                "type": "node",
+                "castshadows": true,
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -6,
+                            "y": -0.08,
+                            "z": 3.5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 45,
+                            "z": 0
+                        }
+                        
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1.2,
+                            "z": 1
+                        }
+                        
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "seat",
+                        "backrest",
+                        "leg1",
+                        "leg2",
+                        "leg3",
+                        "leg4"
+                    ],
+                    "lodsList": [
+                        "leg5_lod",
+                        "leg6_lod"
+                    ]
+                }
+            },
+
+            "seat": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 2.0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3.1,
+                            "y": 0.3,
+                            "z": 3
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "backrest": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 3.5,
+                            "z": -1.6
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 3.1,
+                            "y": 3.0,
+                            "z": 0.3
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -10,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "leg1": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairlegMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.3,
+                            "y": 1.0,
+                            "z": -1.3
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.4,
+                            "y": 2.0,
+                            "z": 0.4
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "leg2": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairlegMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.3,
+                            "y": 1.0,
+                            "z": -1.3
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.4,
+                            "y": 2.0,
+                            "z": 0.4
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "leg3": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairlegMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.3,
+                            "y": 1.0,
+                            "z": 1.3
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.4,
+                            "y": 2.0,
+                            "z": 0.4
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "leg4": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairlegMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.3,
+                            "y": 1.0,
+                            "z": 1.3
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.4,
+                            "y": 2.0,
+                            "z": 0.4
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "leg5": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairlegMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.3,
+                            "y": 1.0,
+                            "z": 0.1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.2,
+                            "y": 0.25,
+                            "z": 2.5
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "leg6": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "chairlegMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.3,
+                            "y": 1.0,
+                            "z": 0.1
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.2,
+                            "y": 0.25,
+                            "z": 2.5
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "leg5_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "leg5",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",
+                    "mindist": 60
+                }]
+            },
+
+            "leg6_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "leg6",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",
+                    "mindist": 60
+                }]
+            },
+            
+            "soro": {
+                "castshadows": true,
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -2,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 25,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1,
+                            "y": 1.2,
+                            "z": 1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "soro1",
+                        "soro2",
+                        "soro3",
+                        "soro4",
+                        "soro5",
+                        "soro6",
+                        "soro7",
+                        "soro8",
+                        "soro9",
+                        "soro12",
+                        "soro13",
+                        "soro14",
+                        "soro15"
+                    ],
+                    "lodsList": [
+                        "soro10_lod",
+                        "soro11_lod"
+                    ]
+                }
+            },
+
+            "soro1": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 2.5,
+                            "y": 6.1,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -45
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.15,
+                            "y": 0.5,
+                            "z": 0.25
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro2": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 2.1,
+                            "y": 6.1,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 45
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.15,
+                            "y": 0.5,
+                            "z": 0.25
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro3": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 2.3,
+                            "y": 3,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.25,
+                            "y": 6,
+                            "z": 0.25
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 0.5,
+                        "top": 0.5,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "soro4": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 3.05,
+                            "y": 6.24,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.95,
+                            "y": 0.15,
+                            "z": 0.25
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro5": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.55,
+                            "y": 6.25,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.95,
+                            "y": 0.12,
+                            "z": 0.25
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro6": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.35,
+                            "y": 5.9,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.1,
+                            "y": 0.8,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro7": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 3.23,
+                            "y": 5.9,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.1,
+                            "y": 0.8,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro8": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "sorobagMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 3.23,
+                            "y": 4.9,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.7,
+                            "y": 1.2,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro9": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "sorobagMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.34,
+                            "y": 4.9,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.7,
+                            "y": 1.2,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro10": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 3.23,
+                            "y": 2.6,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 3.8,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 0.5,
+                        "top": 0.5,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "soro11": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.33,
+                            "y": 2.6,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 3.8,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 0.5,
+                        "top": 0.5,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "soro12": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 3.23,
+                            "y": 4.15,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.1,
+                            "y": 0.3,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro13": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 1.33,
+                            "y": 4.15,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.1,
+                            "y": 0.3,
+                            "z": 0.1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro14": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 2.25,
+                            "y": 0.11,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 2,
+                            "y": 0.17,
+                            "z": 0.25
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro15": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "soroMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 2.25,
+                            "y": 0.11,
+                            "z": 15
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.25,
+                            "y": 0.17,
+                            "z": 2
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "soro10_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "soro10",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",  
+                    "mindist": 40
+                }]
+            },
+
+            "soro11_lod": {
+                "type": "lod",
+                "lodNodes": [{
+                    "nodeId": "soro11",
+                    "mindist": 0
+                },
+                {
+                    "nodeId": "empty_lod",  
+                    "mindist": 40
+                }]
+            },
+
+            "painting": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "paintingMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 12.9,
+                            "y": 8,
+                            "z": 5
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.2,
+                            "y": 4,
+                            "z": 4
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "unitcube": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "rectangle1",
+                        "rectangle2",
+                        "rectangle3",
+                        "rectangle4",
+                        "rectangle5",
+                        "rectangle6"
+                    ]
+                }
+            },
+
+            "rectangle1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": -0.5
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 180,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "rectanglePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+
+            "rectangle2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0,
+                            "z": 0.5
+                        }
+                    }
+                ],
+                "children": {
+                    "rectanglePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+
+            "rectangle3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": -0.5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "rectanglePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+
+            "rectangle4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0.5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": -90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "rectanglePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+
+            "rectangle5": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "rectanglePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+
+            "rectangle6": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.5,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    }
+                ],
+                "children": {
+                    "rectanglePrim": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": -0.5,
+                            "y": -0.5
+                        },
+                        "xy2": {
+                            "x": 0.5,
+                            "y": 0.5
+                        }
+                    }
+                }
+            },
+
+            "bed": {
+                "type": "node",
+                "castshadows": true,
+                "materialref": {
+                    "materialId": "bedMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 2.0,
+                            "z": 10
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 4.8,
+                            "y": 0.4,
+                            "z": 9.0
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "structure",
+                        "mattress",
+                        "legs1",
+                        "legs2",
+                        "legs3",
+                        "legs4",
+                        "bars1",
+                        "bars2",
+                        "bars3",
+                        "bars4",
+                        "bars5",
+                        "bars6"
+                    ]
+                }
+            },
+
+            "structure": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 1.1,
+                            "z": -0.16
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.3,
+                            "y": 1,
+                            "z": 1.2
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "mattress": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "mattressMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 1.65,
+                            "z": -0.17
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.3,
+                            "y": 0.1,
+                            "z": 1.16
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "legs1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.62,
+                            "y": -2.4,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 6,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "legs2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.62,
+                            "y": -2.4,
+                            "z": -0.74
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 6,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "legs3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.62,
+                            "y": -2.4,
+                            "z": -0.74
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 6,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "legs4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.62,
+                            "y": -2.4,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 6,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bars1": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.62,
+                            "y": 2.6,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 4,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bars2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.62,
+                            "y": 2.6,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 4,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bars3": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 2.6,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 4,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bars4": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0.3,
+                            "y": 2.6,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 4,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bars5": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -0.3,
+                            "y": 2.6,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 0.03,
+                            "y": 4,
+                            "z": 0.02
+                        }
+                    }
+                ],
+                "children": {
+                    "cylinderPrim": {
+                        "type": "cylinder",
+                        "base": 1,
+                        "top": 1,
+                        "height": 1,
+                        "slices": 16,
+                        "stacks": 16
+                    }
+                }
+            },
+
+            "bars6": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 4.6,
+                            "z": 0.42
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.3,
+                            "y": 0.4,
+                            "z": 0.05
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "door": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "doorMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": -2.15,
+                            "z": -10.8
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 5,
+                            "y": 11,
+                            "z": 1
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "corridor": {
+                "type": "node",
+                "receiveshadows": true,
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 12,
+                            "y": 7.5,
+                            "z": -23.5
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "corridorfloor",
+                        "corridorroof",
+                        "frontcorridorwall",
+                        "backcorridorwall",
+                        "frontcorridorwall",
+                        "leftcorridorwall",
+                        "rightcorridorwall",
+                        "corridorbed"
+                    ]
+                }
+            },
+            "frontcorridorwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "corridorWallMaterial2"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 180,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0.4,
+                            "z": 12.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 30,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -30,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "backcorridorwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "corridorWallMaterial2"
+                },
+                "transforms": [
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 0.4,
+                            "z": -3.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 30,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -30,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "leftcorridorwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "corridorWallMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 30,
+                            "y": 0.4,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontroomwall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 8,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -8,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "rightcorridorwall": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "corridorWallMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 90,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -30,
+                            "y": 0.4,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 8,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -8,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "corridorfloor": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "corridorFloorMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": -7.6,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 30,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -30,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "corridorroof": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "roomRoofMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 90,
+                            "y": 0,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 8,
+                            "z": 4.5
+                        }
+                    }
+                ],
+                "children": {
+                    "frontRoomWall": {
+                        "type": "rectangle",
+                        "xy1": {
+                            "x": 30,
+                            "y": 8
+                        },
+                        "xy2": {
+                            "x": -30,
+                            "y": -8
+                        }
+                    }
+                }
+            },
+
+            "corridorbed": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "televisionBodyMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": -195,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -26,
+                            "y": -7.4,
+                            "z": 12
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "bed",
+                        "television"
+                    ]
+                }
+            },
+
+            "television": {
+                "type": "node",
+                "children": {
+                    "nodesList": [
+                        "televisionbody",
+                        "televisionbody2",
+                        "televisionscreen"
+                    ]
+                }
+            },
+
+            "televisionbody": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.5,
+                            "y": 3.5,
+                            "z": 3.7
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1,
+                            "y": 4.2,
+                            "z": 10
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "televisionbody2": {
+                "type": "node",
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 5,
+                            "z": 0
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.5,
+                            "y": 2.3,
+                            "z": 2.2
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": 0,
+                            "y": 3.5,
+                            "z": 9.7
+                        }
+                    }
+                ],
+                "children": {
+                    "nodesList": [
+                        "unitcube"
+                    ]
+                }
+            },
+
+            "televisionscreen": {
+                "type": "node",
+                "materialref": {
+                    "materialId": "televisionScreenMaterial"
+                },
+                "transforms": [
+                    {
+                        "type": "rotate",
+                        "amount": {
+                            "x": 0,
+                            "y": 95,
+                            "z": 90
+                        }
+                    },
+                    {
+                        "type": "scale",
+                        "amount": {
+                            "x": 1.2,
+                            "y": 1.4,
+                            "z": 2
+                        }
+                    },
+                    {
+                        "type": "translate",
+                        "amount": {
+                            "x": -1.46,
+                            "y": 4.3,
+                            "z": 10.2
+                        }
+                    }
+                ],
+                "children": {
+                    "nurbsPrim": {
+                        "type": "nurbs",
+                        "degree_u": 2,
+                        "degree_v": 2,
+                        "parts_u": 16,
+                        "parts_v": 16,
+                        "controlpoints": [
+                            {"x": -1, "y":  1, "z": -0.1}, {"x":  0, "y":  1, "z": -0.2}, {"x":  1, "y":  1, "z": -0.1},
+                            {"x": -1, "y":  0, "z": -0.2}, {"x":  0, "y":  0, "z": -0.3}, {"x":  1, "y":  0, "z": -0.2},
+                            {"x": -1, "y": -1, "z": -0.1}, {"x":  0, "y": -1, "z": -0.2}, {"x":  1, "y": -1, "z": -0.1}
+                        ]
+                    }
+                }
+            }
+
+        }
+    }
+}
