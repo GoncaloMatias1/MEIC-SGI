@@ -84,11 +84,3 @@ The second menu allows the player to choose across different racing teams, as we
 
 The end menu shows up when the race ends, for example when all laps are done. This menu shows the race results, including the winner, the time taken to complete all laps, and the color of the balloon of our player and opponent. 
 
-
-----
-## Issues/Problems
-
-- Bad time organization
-- Bad communication
-- Bad division of work
-- Balloon control is difficult and not very intuitive
